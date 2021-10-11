@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import Navbar from './components/navbar/navbar';
+import Form from './pages/form/form';
+import Submit from './pages/submit/submit';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-Container">
+        <nav>
+          <Navbar />
+        </nav>
+        <Switch>
+          <Redirect exact from="/" to="/form" />
+          <Route exact path="/form" component={Form} />
+          <Route exact path="/form/submit" component={Submit} />
+        </Switch>
+      </div>
+
     </div>
   );
 }

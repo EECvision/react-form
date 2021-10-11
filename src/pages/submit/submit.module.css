@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  max-width: 64em;
+  margin: 0 auto;
+  padding-top: 2em;
+  position: relative;
+  margin-bottom: 4em;
+  padding: 2em 1em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color-bold);
+}
+
+.header {
+  width: 100%;
+  color: var(--text-color-bold);
+  margin-bottom: 1.5em;
+  margin-top: 2em;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  background: var(--section-bkg-color);
+  padding: 0.5em;
+}
+
+.name {
+  width: auto;
+  margin-right: 2em;
+  color: var(--text-color-bold);
+}
+
+.value {
+ flex: 1;
+ text-transform: capitalize;
+}
+
+.noValue {
+  color: var(--text-color-light);
+}

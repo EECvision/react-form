@@ -1,0 +1,40 @@
+.container {
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1em;
+  cursor: pointer;
+  padding: 1px;
+  background: var(--main-bkg-color);
+  border: 1px solid var(--border-color);
+}
+
+.container.toggle {
+  background: var(--nav-bkg-color);
+}
+
+.knob {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  transition: all 0.3s;
+  transform: translateX(0);
+  background: var(--section-bkg-color);
+}
+
+.container.toggle .knob{
+  border: 1px solid black;
+  transform: translateX(80%);
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    width: 2em;
+  }
+
+  .knob {
+    width: 1em;
+    height: 1em;
+  }
+}

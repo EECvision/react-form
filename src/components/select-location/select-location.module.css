@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  padding: 3em;
+  margin-bottom: 1em;
+  background: var(--section-bkg-color);
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 1em;
+  color: var(--text-color-bold);
+}
+
+.partOne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.5em;
+  gap: 1em;
+}
+
+.partTwo {
+  display: flex;
+  gap: 1em;
+}
+
+.partTwo > div{
+  flex: 1;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.25em;
+  padding: 1px;
+  border: 1px solid var(--border-color);
+}
+
+.button {
+  padding: 0.65em;
+  cursor: pointer;
+  border-radius: 0.25em;
+  border: 1px solid transparent;
+}
+
+.button.active {
+  border: 1px solid var(--border-color);
+}
+
+.input {
+  flex: 1;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--main-accent);
+}
+
+.input > label {
+  margin-right: 0.5em;
+  white-space: nowrap;
+}
+
+.input > input,
+.input > select {
+  flex: 1;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  width: 5em;
+  background: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .partTwo {
+    flex-direction: column;
+  }
+
+  .partOne {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1em;
+  }
+
+  .partOne > div {
+    width: 100%;
+  }
+
+  .container {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    padding: 1em;
+  }
+
+  .input > label {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 0.3em 0.5em;
+  }
+}

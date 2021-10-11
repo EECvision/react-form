@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  padding: 3em;
+  background: var(--section-bkg-color);
+
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 3em;
+  color: var(--text-color-bold);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.service {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.button {
+  margin-right: 1em;
+}
+
+.title {
+  color: var(--text-color-bold);
+}
+
+.description {
+  color: var(--text-color-light);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+
+  .container {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    padding: 1em;
+  }
+}

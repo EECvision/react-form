@@ -1,0 +1,45 @@
+.button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0.6em 2em;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.button:hover .overlay{
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.button.clicked {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.button.outline {
+  border: 1px solid var(--border-color);
+  color: var(--nav-text-color);
+}
+
+.button.fill {
+  background: var(--button-bkg-color);
+  color: var(--nav-text-color);
+}
+
+@media screen and (max-width: 540px) {
+  .button {
+    font-size: 0.8rem;
+  }
+}
