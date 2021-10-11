@@ -7,12 +7,16 @@ import SelectService from '../../components/select-service/select-service';
 import styles from './form.module.css';
 import { Link } from 'react-router-dom';
 import { FormContext } from '../../form-state/form.context';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { setSubmit } from '../../form-state/form.actions';
 
 const Form = () => {
   
   const { dispatch } = useContext(FormContext);
+
+  useEffect(()=> {
+    dispatch(setSubmit(false));
+  },[]);
 
   return (
     <div className={styles.formContainer}>
